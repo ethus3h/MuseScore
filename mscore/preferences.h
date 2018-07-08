@@ -65,7 +65,8 @@ enum {
 
 enum class MuseScoreStyleType : char {
       DARK_FUSION = 0,
-      LIGHT_FUSION
+      LIGHT_FUSION,
+      NATIVE
       };
 
 // MusicXML export break values
