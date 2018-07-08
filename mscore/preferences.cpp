@@ -49,7 +49,7 @@ void Preferences::init(bool storeInMemoryOnly)
       // Qt file dialog is very slow on Windows and Mac
       bool nativeDialogs           = true;
 #else
-      bool nativeDialogs           = false;    // don't use system native file dialogs
+      bool nativeDialogs           = true;    // don't use system native file dialogs
 #endif
 
       bool defaultUsePortAudio = false;
@@ -154,7 +154,7 @@ void Preferences::init(bool storeInMemoryOnly)
             {PREF_UI_APP_STARTUP_SHOWPLAYPANEL,                    new BoolPreference(false, false)},
             {PREF_UI_APP_STARTUP_SHOWSPLASHSCREEN,                 new BoolPreference(true, false)},
             {PREF_UI_APP_STARTUP_SHOWSTARTCENTER,                  new BoolPreference(true, false)},
-            {PREF_UI_APP_GLOBALSTYLE,                              new EnumPreference(QVariant::fromValue(MuseScoreStyleType::LIGHT_FUSION), false)},
+            {PREF_UI_APP_GLOBALSTYLE,                              new EnumPreference(QVariant::fromValue(MuseScoreStyleType::STYLE_NATIVE), false)},
             {PREF_UI_APP_LANGUAGE,                                 new StringPreference("system", false)},
             {PREF_UI_APP_RASTER_HORIZONTAL,                        new IntPreference(2)},
             {PREF_UI_APP_RASTER_VERTICAL,                          new IntPreference(2)},
